@@ -20,4 +20,13 @@ notesContainer.addEventListener("click", function(e){
         e.target.parentElement.remove();
         updateStorage();
     }
+    else if (e.target.tagName === "P") {
+        notes = document.querySelectorAll(".input-box");
+        notes.forEach(nt => {
+            nt.onkeyup = function() {
+                updateStorage();
+            }
+        }
+        )
+    }
 })
